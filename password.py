@@ -60,7 +60,7 @@ def password():
     def verify_user():
         gottenPassword = data[data.loc[:, 'unique_id'] == video_check.real_user].loc[:, 'password'].values[0]
         print (str (gottenPassword))
-        gottenEmail = data[data.loc[:, 'unique_id'] == video_check.real_user].loc[:, 'name'].values[0]
+        gottenEmail = data[data.loc[:, 'unique_id'] == video_check.real_user].loc[:, 'email'].values[0]
         print (str (gottenEmail))
         if str (entry_1.get ()) == str (gottenPassword):
             window.destroy ()
@@ -94,7 +94,7 @@ def password():
         350.0,
         image=image_image_1
     )
-    gottenEmail = data[data.loc[:, 'unique_id'] == video_check.real_user].loc[:, 'name'].values[0]
+    gottenEmail = data[data.loc[:, 'unique_id'] == video_check.real_user].loc[:, 'email'].values[0]
 
     canvas.create_text (
         35.0,

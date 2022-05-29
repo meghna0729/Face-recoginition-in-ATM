@@ -21,7 +21,7 @@ def deposit():
     def user_deposit_trans():
         data = pd.read_csv ('bank_details.csv')
         update_data = data.set_index ('unique_id')
-        update_data.loc[video_check.real_user, 'account_balance'] += int (entry_1.get ())
+        update_data.loc[video_check.real_user, 'acc_balance'] += int (entry_1.get ())
         update_data.reset_index (inplace=True)
         update_data.columns = ['unique_id', 'account_number', 'email', 'bank', 'password', 'acc_balance', 'mobile_no']
         update_data.to_csv ('bank_details.csv', index=None)

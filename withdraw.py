@@ -28,8 +28,8 @@ def with_draw():
         update_data = data.set_index ('unique_id')
         if int (entry_1.get ()) % 500 != 0:
             messagebox._show ("withdrawl info!", "please enter amount in multiple of 500")
-        elif int (entry_1.get ()) <= update_data.loc[video_check.real_user, 'account_balance']:
-            update_data.loc[video_check.real_user, 'account_balance'] -= int (entry_1.get ())
+        elif int (entry_1.get ()) <= update_data.loc[video_check.real_user, 'acc_balance']:
+            update_data.loc[video_check.real_user, 'acc_balance'] -= int (entry_1.get ())
             update_data.reset_index (inplace=True)
             update_data.columns = ['unique_id', 'account_number', 'email', 'bank', 'password', 'acc_balance', 'mobile_no']
             update_data.to_csv ('bank_details.csv', index=None)

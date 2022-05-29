@@ -29,16 +29,16 @@ def transfer():
             window.destroy ()
             transaction.transaction ()
         elif int (entry_1.get ()) >= \
-                data[data.loc[:, 'unique_id'] == video_check.real_user].loc[:, 'account_balance'].values[0]:
+                data[data.loc[:, 'unique_id'] == video_check.real_user].loc[:, 'acc_balance'].values[0]:
             messagebox._show ("Transfer Info!", "Insufficient Funds")
             window.destroy ()
             transaction.transaction ()
         else:
             data = pd.read_csv ('bank_details.csv')
             update_data = data.set_index ('account_number')
-            update_data.loc[int (entry_2.get ()), 'account_balance'] += int (entry_1.get ())
+            update_data.loc[int (entry_2.get ()), 'acc_balance'] += int (entry_1.get ())
             update_data.loc[data[data.loc[:, 'unique_id'] == video_check.real_user].loc[:, 'account_number'].values[
-                                0], 'account_balance'] -= int (entry_1.get ())
+                                0], 'acc_balance'] -= int (entry_1.get ())
             update_data['account_number'] = update_data.index
             update_data.reset_index (drop=True, inplace=True)
             update_data = update_data.reindex (

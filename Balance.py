@@ -74,7 +74,7 @@ def balance():
         height=177.0
     )
     data = pd.read_csv ('bank_details.csv')
-    text = data[data.loc[:, 'unique_id'] == video_check.real_user].loc[:, 'account_balance'].values[0]
+    text = data[data.loc[:, 'unique_id'] == video_check.real_user].loc[:, 'acc_balance'].values[0]
 
     canvas.create_text (
         63.0,
