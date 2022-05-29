@@ -28,3 +28,6 @@ eliminates the chances of fraud due to theft and duplicity of the ATM cards.
 
 • Click on fdetect.py file for starting the project.
 
+# Note
+Add nn4.small2.v1.t7 to path .../Face-recoginition-in-ATM/ from nn4.txt file before running project.
+
