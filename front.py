@@ -1,7 +1,7 @@
 import tkinter
 from pathlib import Path
 from tkinter import Tk, Canvas, Button, PhotoImage
-
+import sys
 import dashboard
 
 
@@ -71,7 +71,7 @@ def front():
                        image=button_image_2,
                        borderwidth=0,
                        highlightthickness=0,
-                       command=lambda: (window.destroy (), root.destroy ()),
+                       command=lambda: (window.destroy (), sys.exit()),
                        relief="flat"
                        )
 
